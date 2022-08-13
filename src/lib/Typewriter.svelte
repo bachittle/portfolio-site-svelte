@@ -10,6 +10,8 @@
   if (texts.length != 0) {
     text = texts[textsIndex]; // initialize text to first element, then change this on the eraseText reset.
   }
+
+  let isAnimatingCaret = true;
   
   function typeWriter() {
     if (typedText.length < text.length) {
@@ -28,6 +30,8 @@
         }
         setTimeout(typeWriter, 1000);
       }, 2000);
+    } else {
+      isAnimatingCaret = false;
     }
   }
   setTimeout(typeWriter, typeSpeed);
@@ -36,9 +40,13 @@
   export const caretChar = '|';
   
   function animateCaret() {
-    if (animatedCaret.length == 0) {
-      animatedCaret = '|';
-    } else { 
+    if (isAnimatingCaret) {
+      if (animatedCaret.length == 0) {
+        animatedCaret = '|';
+      } else { 
+        animatedCaret = '';
+      }
+    } else {
       animatedCaret = '';
     }
   }
