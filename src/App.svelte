@@ -11,8 +11,8 @@ import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
 </script>
 
 <div class="my-text">
-  <h1><Typewriter text={'Bailey Chittle'} eraseText={false}/></h1>
-  <p><Typewriter texts={[
+  <h1 class="title"><Typewriter text={'Bailey Chittle'} eraseText={false}/></h1>
+  <p class="description"><Typewriter texts={[
     "Software engineer",
     "Currently employed to write efficient C++ for ultrasonic systems",
     `"The more you know, the more you realize you know nothing" -Socrates`,
@@ -25,18 +25,18 @@ import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
 </div>
 
 <div class="logo-icons">
-  <div class="icon">
+  <a class="icon gh-icon" href="#">
     <DiGithubBadge />
-  </div>
-  <div class="icon">
+  </a>
+  <a class="icon resume-icon" href="#">
     <FaFileAlt />
-  </div>
-  <div class="icon">
+  </a>
+  <a class="icon project-icon" href="#">
     <FaProjectDiagram />
-  </div>
-  <div class="icon">
+  </a>
+  <a class="icon in-icon" href="#">
     <FaLinkedin />
-  </div>
+  </a>
 </div>
 
 <style>
@@ -44,12 +44,26 @@ import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
     text-align: center;
     margin: 10% 0 2% 0;
   }
+  .description {
+    height: 19px;
+  }
+  .title {
+    height: 39px;
+  }
+
   .logo-icons {
+    margin: 0 25%;
     display: flex;
     justify-content: space-around;
   }
   .icon {
-    width: 100px;
+    height: 100px;
     margin: 0;
+    color: white;
+  }
+  .gh-icon {
+    position: relative;
+    bottom: 20px;
+    height: 140px;
   }
 </style>
