@@ -4,6 +4,7 @@
   import FaFileAlt from 'svelte-icons/fa/FaFileAlt.svelte'
 import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
 import Projects from "./lib/Projects.svelte";
+import ParticleAnim from "./lib/ParticleAnim.svelte";
   
   const logos = {
     
@@ -12,6 +13,7 @@ import Projects from "./lib/Projects.svelte";
 
 <div class="pages">
   <div class="page intro">
+    <ParticleAnim />
     <div class="my-text">
       <h1 class="title"><Typewriter text={'Bailey Chittle'} eraseText={false}/></h1>
       <p class="description"><Typewriter texts={[
@@ -23,7 +25,6 @@ import Projects from "./lib/Projects.svelte";
         "My CSS is !important",
         `$("#Github").click();`,
       ]}/></p>
-      
     </div>
 
     <div class="logo-icons">
@@ -81,7 +82,7 @@ import Projects from "./lib/Projects.svelte";
   }
   .description {
     height: 19px;
-    margin: 2em 0;
+    margin: 3em 4em;
   }
 
   .logo-icons {
