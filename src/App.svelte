@@ -66,7 +66,7 @@ import ParticleAnim from "./lib/ParticleAnim.svelte";
     }
     .page {
       width: 100%;
-      height: 45vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       flex-direction: column;

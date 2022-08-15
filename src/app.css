@@ -5,3 +5,8 @@ body {
     
     font-family: 'Quicksand', sans-serif;
 }
+  @media (max-width: 820px) {
+      body {
+        overflow: auto;
+      }
+  }

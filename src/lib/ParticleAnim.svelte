@@ -92,7 +92,7 @@
       @media (max-width: 820px) {
           canvas {
             width: 97vw;
-            height: 42vh;
+            height: 97vh;
           }
       }
 </style>
