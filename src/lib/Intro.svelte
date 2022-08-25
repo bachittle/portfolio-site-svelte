@@ -26,15 +26,15 @@
     </div>
 
     <div class="logo-icons">
-      <a class="icon gh-icon" href="https://github.com/bachittle">
+      <a class="icon gh-icon" href="https://github.com/bachittle" target="_blank">
         <DiGithubBadge />
         <p>Github</p>
       </a>
-      <a class="icon in-icon" href="https://linkedin.com/in/bailey-chittle">
+      <a class="icon in-icon" href="https://linkedin.com/in/bailey-chittle" target="_blank">
         <FaLinkedin />
         <p>Linkedin</p>
       </a>
-      <a class="icon resume-icon" href="#">
+      <a class="icon resume-icon" href="/cv.pdf" target="_blank">
         <FaFileAlt />
         <p>resume</p>
       </a>
