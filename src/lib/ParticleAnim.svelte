@@ -9,11 +9,13 @@
     onMount(() => {
         const orbit = {
             radius: 0,
+            xOffset: 0,
+            yOffset: -60
         };
         const resizeHandler = () => {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
-            orbit.radius = Math.min(canvas.width/2, canvas.height/2) - 50;
+            orbit.radius = canvas.height / 4;
         }
         
         
@@ -38,8 +40,8 @@
 
             // called each frame, update should make changes to the properties of Particle, but not draw anything.
             update() {
-                this.x = canvas.width/2 + Math.sin(this.id + counter*this.speed) * -(orbit.radius + this.orbitOffset);
-                this.y = canvas.height/2 + Math.cos(this.id + counter*this.speed) * (orbit.radius + this.orbitOffset);
+                this.x = canvas.width/2 + orbit.xOffset + Math.sin(this.id + counter*this.speed) * -(orbit.radius + this.orbitOffset);
+                this.y = canvas.height/2 + orbit.yOffset + Math.cos(this.id + counter*this.speed) * (orbit.radius + this.orbitOffset);
             }
 
             // called each frame, renders to the screen. 
@@ -84,15 +86,8 @@
         top: 0;
         left: 0;
         /* border: 5px solid black; */
-        width: 49vw;
-        height: 97vh;
+        width: 100vw;
+        height: 100vh;
         z-index: -1;
     }
-
-      @media (max-width: 820px) {
-          canvas {
-            width: 97vw;
-            height: 97vh;
-          }
-      }
 </style>
